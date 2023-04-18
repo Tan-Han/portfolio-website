@@ -41,7 +41,7 @@
       <div class="link-box">
         <template v-if="item.link">
           <a :href="item.link" :if="item.link" target="_blank">
-            <i style='font-size:24px' class='fas'>&#xf360;</i>
+            <i style='font-size:24px' class='fas'>&#xf03e;</i>
           </a>
         </template>
         <template v-if="item.github">

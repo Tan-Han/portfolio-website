@@ -53,7 +53,7 @@
           <div class="link-box">
             <template v-if="item.link">
               <a :href="item.link" :if="item.link" target="_blank">
-                <i style='font-size:24px' class='fas'>&#xf360;</i>
+                <i style='font-size:24px' class='fas'>&#xf03e;</i>
               </a>
             </template>
             <template v-if="item.github">
@@ -191,8 +191,8 @@ background: linear-gradient(180deg, #ffffff00 0%, #21212180 100%);
   font-weight: 600;
   padding-top: 30px;
   padding-bottom: 15px;
-  color: var(--vt-c-beige-dark);
-  text-shadow: 1px 1px 1.5px var(--vt-c-darkgrey);
+  color: var(--vt-c-blue);
+  text-shadow: 1.5px 1.5px 3px var(--vt-c-darkgrey);
 }
 
 .projects {

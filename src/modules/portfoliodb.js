@@ -44,7 +44,7 @@ const getPortfolio = () => {
       description: "This is my portfolio 3",
       category: "Fotografi",
       image: "../src/assets/img/Christian IX statue -edited.png",
-      link: "../scr/assets/img/Christian IX statue - full.png",
+      link: "../src/assets/img/Chr-IX-full.png",
       tech: "Photoshop",
       date: "2022-11-03",
       completed: false,
