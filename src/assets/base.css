@@ -1,0 +1,56 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #F9FBFB;
+  --vt-c-darkgrey: #212121;
+  --vt-c-beige-dark: #CDBCAF;
+  --vt-c-beige-light: #DCD8D0;
+  --vt-c-blue: #C9EBF2;
+  --vt-c-text-light-1: var(--vt-c-darkgrey);
+  --vt-c-text-light-2: var(--vt-c-darkgrey);
+  --vt-c-shadow-blue: #13424c;
+  --vt-c-shadow-beige: #91867d;
+  
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var();
+  --color-background-mute: var();
+
+  --color-border: var();
+  --color-border-hover: var();
+
+  --color-heading: var();
+  --color-text: var(--vt-c-darkgrey);
+
+  --section-gap: 160px;
+} 
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

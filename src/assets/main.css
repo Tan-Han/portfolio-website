@@ -1,0 +1,192 @@
+@import './base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-family: "adorn-smooth-garland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+h3 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h4 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.content-box, .about, .projects {
+  padding: 2rem;
+}
+
+#app {
+  max-width: 100%; /* Changed: 1280px */
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--vt-c-darkgrey);
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+
+/* Portfolio cards */
+
+.about {
+  min-height: 100%;
+ }
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; 
+}
+.portfolio-item {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--vt-c-beige-dark);
+  /* border-radius: 12px; */
+  box-shadow: 5px 5px 5px var(--vt-c-shadow-beige); 
+  max-width: 250px;
+  background-color: var(--vt-c-white);
+}
+
+.card-description-box {
+  height: 60px;
+  padding: 10px 0;
+}
+
+.imgbox {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.link-box {
+  height: 120px;
+  padding: 10px 0;
+}
+
+.link-box a:hover {
+  color: var(--vt-c-blue);
+  text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
+}
+
+.category {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.Web {
+  color: var(--vt-c-beige-light);
+  border-left: 2px solid var(--vt-c-beige-light);
+  text-shadow: 0.5px 0.5px 1px var(--vt-c-darkgrey);
+
+}
+
+.Video {
+  color: var(--vt-c-beige-dark);
+  border-left: 2px solid var(--vt-c-beige-dark);
+  text-shadow: 0.5px 0.5px 1px var(--vt-c-darkgrey);
+}
+
+.Photoshop, .Illustrator, .Indesign {
+  color: var(--vt-c-blue);
+  border-left: 2px solid var(--vt-c-blue);
+  text-shadow: 0.5px 0.5px 1px var(--vt-c-darkgrey);
+}
+
+/* .Illustrator {
+  color: #cb2f9a;
+  border-left: 2px solid #cb2f9a;
+}
+
+.Indesign {
+  color: #2fca80;
+  border-left: 2px solid #2fca80;
+} */
+
+.incomplete {
+  color: #bc0c0c;
+}
+
+.complete {
+  color: #14b314;
+}
+
+.portfolio-item a {
+  font-size: 15px;
+  font-weight: 400;
+  padding-right: 0.5rem;
+  text-shadow: 1px 1px 1px var(--vt-c-shadow-blue);
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--vt-c-beige-light);
+  box-shadow: 1px 1px 3px var(--vt-c-shadow-beige);
+  border: 0.5px solid var(--vt-c-beige-dark);
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+button:hover {
+  color: var(--vt-c-white);
+  text-shadow: 1px 1px 2px var(--vt-c-darkgrey);
+}
+
+/* Media Queries */
+
+@media (hover: hover) {
+  a:hover {
+
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+   /*  place-items: center; */  /* Changed */
+  }
+
+  #app {
+    display: flex; /* Changed: grid */
+    flex-direction: column; /* Added */
+    
+    /* grid-template-columns: 1fr; */ /* Changed */
+    width:100%; /* Added */
+  }
+}
