@@ -34,27 +34,27 @@ const isActive = ref(true)
 <style>
 .about {
   width: 100vw;
-  height: 100vh;
-  padding-top: 100px;
+  height: fit-content;
+  /* padding-top: 100px; */
 }
 
 .about h1 {
   color: var(--vt-c-blue);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
-  font-size: 90px;
+  font-size: 70px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .about-content {
   display: flex;
   align-items: center;
-  height: 80%;
+  height: auto;
 }
 
 .about-text-box {
   max-width: 50%;
-  height: 500px;
+  height: fit-content;
   display: flex;
   align-items: center;
 }
@@ -98,7 +98,7 @@ const isActive = ref(true)
 
 .video-cv-box {
   width: 50%;
-  height: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;

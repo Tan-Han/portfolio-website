@@ -4,14 +4,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <img alt="TH logo" class="logo" src="@/assets/img/Logo.svg" width="75" height="75" />
+    <img alt="TH logo" class="logo" src="@/assets/img/Logo - ny.svg" width="75" height="75" />
 
     <div class="wrapper">
 
       <nav>
         <RouterLink to="/">Hjem</RouterLink>
         <RouterLink to="/projects">Projekter</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">Om mig</RouterLink>
         <RouterLink to="/contact">Kontakt</RouterLink>
       </nav>
     </div>
@@ -27,6 +27,23 @@ import { RouterLink, RouterView } from 'vue-router'
 <!-- <Transition mode="out-in" name="slide-fade"> -->  <!-- no name, slide-fade, bounce -->
 <!--     <RouterView />
   </Transition>   -->
+
+
+<footer class="rounded-lg shadow m-4">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm sm:text-center ">© 2023 <a href="/home" class="hover:underline">TRSHansen</a>.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
+        <li>
+            <a href="/about" class="mr-4 hover:underline md:mr-6 ">Om mig</a>
+        </li>
+        <li>
+            <a href="/contact" class="hover:underline">Kontakt</a>
+        </li>
+    </ul>
+    </div>
+</footer>
+
 
 </template>
 
@@ -87,9 +104,9 @@ header {
   width: 100%;
   background-color: #dcd8d0;
   padding: 0 2rem;
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 5; */
   box-shadow: 0 0 15px var(--vt-c-shadow-beige);
 }
 
@@ -128,6 +145,11 @@ nav a:first-of-type {
   border: 0;
 }
 
+footer {
+  margin: 20px 20px;
+  background-color: var(--vt-c-beige-light);
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -156,4 +178,5 @@ nav a:first-of-type {
     padding: 1rem 0;
   }
 }
+
 </style>

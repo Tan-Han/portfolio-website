@@ -3,10 +3,10 @@
    <!--  {{ state }} -->
    <div>
     <!-- part 0 -->
-    <div :class="{ active: isActive }">tt</div>
+    <div :class="{ active: isActive }"></div>
 
     <!-- part 1 -->
-      <h1>Portfolio</h1>
+      <h1>Mine projekter</h1>
       <p>Here is a list of my projects</p>
       
       <br>
@@ -21,26 +21,36 @@
 
    <div class="portfolio-container">
    <div class="portfolio-item"  v-for="item in state" :key="item">
-      <p class="category" :class="item.category">
-        {{ item.category }}
-      </p>
+      <div class="imgbox">
+        <img :src="item.image" alt="image" class="portfolio-card-img">
+      </div>
+
       <div class="card-description-box">
+        <p class="category" :class="item.category">
+          {{ item.category }}
+        </p>
         <h4>{{ item.title }}</h4>
         <p>
           {{ item.description }}
         </p>
       </div>
-      <div class="imgbox">
-        <img :src="item.image" alt="image" class="portfolio-card-img">
-      </div>
 
       <div class="link-box">
-        <a :href="item.github">
-          <i style='font-size:24px' class='fab'>&#xf092;</i>
-        </a>
-        <a :href="item.github">
-          <i style='font-size:24px' class='fab'>&#xf431;</i>
-        </a>
+        <template v-if="item.link">
+          <a :href="item.link" :if="item.link" target="_blank">
+            <i style='font-size:24px' class='fas'>&#xf360;</i>
+          </a>
+        </template>
+        <template v-if="item.github">
+          <a :href="item.github" :if="item.github" target="_blank">
+            <i style='font-size:24px' class='fab'>&#xf092;</i>
+          </a>
+        </template>
+        <template v-if="item.youtube">
+          <a :href="item.youtube" :if="item.youtube" target="_blank">
+            <i style='font-size:24px' class='fab'>&#xf431;</i>
+          </a>
+        </template>
         
         <p>
           TechStack: {{ item.tech }}
@@ -74,6 +84,16 @@ const { state  } = portfoliodb()
 </script>
  
 <style>
+/* .projects {
+  padding-top: 100px;
+} */
 
+.projects h1 {
+  color: var(--vt-c-blue);
+  text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
+  font-size: 70px;
+  text-align: center;
+  padding-top: 30px;
+}
 
 </style>

@@ -35,26 +35,37 @@
 
       <div class="portfolio-container">
         <div class="portfolio-item"  v-for="item in state" :key="item">
-          <p class="category" :class="item.category">
-            {{ item.category }}
-          </p>
+          <div class="imgbox">
+            <img :src="item.image" alt="image" class="portfolio-card-img">
+          </div>
+
           <div class="card-description-box">
+            <p class="category" :class="item.category">
+              {{ item.category }}
+            </p>
             <h4>{{ item.title }}</h4>
             <p>
               {{ item.description }}
             </p>
           </div>
-          <div class="imgbox">
-            <img :src="item.image" alt="image" class="portfolio-card-img">
-          </div>
 
           <div class="link-box">
-            <a :href="item.github">
-              <i style='font-size:24px' class='fab'>&#xf092;</i>
-            </a>
-            <a :href="item.youtube">
-              <i style='font-size:24px' class='fab'>&#xf431;</i>
-            </a>
+            <template v-if="item.link">
+              <a :href="item.link" :if="item.link" target="_blank">
+                <i style='font-size:24px' class='fas'>&#xf360;</i>
+              </a>
+            </template>
+            <template v-if="item.github">
+              <a :href="item.github" :if="item.github" target="_blank">
+                <i style='font-size:24px' class='fab'>&#xf092;</i>
+              </a>
+            </template>
+            <template v-if="item.youtube">
+              <a :href="item.youtube" :if="item.youtube" target="_blank">
+                <i style='font-size:24px' class='fab'>&#xf431;</i>
+              </a>
+            </template>
+            
             <p>
               TechStack: {{ item.tech }}
             </p>
@@ -65,7 +76,7 @@
           <!-- part 3 -->
           <div class="btn-box">
             <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}"><button class="see-more">Se mere</button></RouterLink>
-          </div>
+          </div>  
         </div>
       </div>
     </div>
@@ -98,7 +109,7 @@
   max-width: 45%;
   display: flex;
   align-items: center;
-  height: 95vh;
+  height: 75vh;
 }
 
 .welcometextbox div {
@@ -133,10 +144,10 @@
 
 .imagebox {
   width: 45%;
-  height: 95vh;
+  height: 75vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .img-home {
   width: 70%;
@@ -146,9 +157,9 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 95vh;
+  height: 75vh;
   width: 10%;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0rem;
 }
 
 .arrow-img {
@@ -170,7 +181,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: 1.5px solid var(--vt-c-beige-dark);
+  border-bottom: 1px solid var(--vt-c-beige-dark);
 }
 
 .latest-headline h2 {
@@ -178,6 +189,8 @@
   font-weight: 600;
   padding-top: 30px;
   padding-bottom: 15px;
+  color: var(--vt-c-beige-dark);
+  text-shadow: 1px 1px 1.5px var(--vt-c-darkgrey);
 }
 
 .projects {
