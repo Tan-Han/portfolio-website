@@ -3,10 +3,10 @@ import { ref } from 'vue'
 const getPortfolio = () => {
   const state = ref([
     {
-      id: "Logo",
+      id: "go-logo-img",
       title: "Green Office",
       description: "This is my portfolio 3",
-      category: "Illustrator",
+      category: "Grafisk design",
       image: "../src/assets/img/GreenOffice.png",
       link: "../src/assets/img/GreenOffice.png",
       tech: "Adobe Illustrator",
@@ -15,10 +15,10 @@ const getPortfolio = () => {
       complete: "incomplete"
     },
     {
-      id: "Logo",
+      id: "bd-dk-logo-img",
       title: "Bloddonorerne DK",
       description: "This is my portfolio 3",
-      category: "Illustrator",
+      category: "Grafisk design",
       image: "../src/assets/img/bddanmark.png",
       link: "../src/assets/img/bddanmark.png",
       tech: "Adobe Illustrator",
@@ -27,10 +27,10 @@ const getPortfolio = () => {
       complete: "incomplete"
     },
     {
-      id: "Billede",
+      id: "rings-img",
       title: "Rings",
       description: "This is my portfolio 3",
-      category: "Photoshop",
+      category: "Fotografi",
       image: "../src/assets/img/The Rings - Tanya - DK.png",
       link: "../src/assets/img/The Rings - Tanya - DK.png",
       tech: "Photoshop",
@@ -39,10 +39,10 @@ const getPortfolio = () => {
       complete: "incomplete"
     },
     {
-      id: "Billede",
+      id: "chr-ix-img",
       title: "Chr. IX",
       description: "This is my portfolio 3",
-      category: "Photoshop",
+      category: "Fotografi",
       image: "../src/assets/img/Christian IX statue -edited.png",
       link: "../scr/assets/img/Christian IX statue - full.png",
       tech: "Photoshop",
@@ -51,7 +51,7 @@ const getPortfolio = () => {
       complete: "incomplete"
     },
     {
-      id: "Video",
+      id: "boren-promo",
       title: "Broen Promotion",
       description: "This is my portfolio 3",
       category: "Video",
@@ -62,6 +62,20 @@ const getPortfolio = () => {
       completed: false,
       complete: "incomplete"
     },
+    {
+        id: "dm-bbq",
+        title: "Longhorn BBQ website",
+        description: "This is my portfolio 3",
+        category: "Web",
+        image: "../src/assets/img/dm-bbq.png",
+        github: "https://github.com/Tan-Han/Tan-Han.github.io",
+        link:"",
+        tech: "Premiere Pro",
+        date: "2022-11-04",
+        completed: false,
+        complete: "incomplete"
+      }
+
     // {
     //   id: "Video",
     //   title: "Broen Promotion",

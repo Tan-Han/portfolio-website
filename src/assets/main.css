@@ -28,6 +28,12 @@ h4 {
   font-style: normal;
 }
 
+h5 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 .content-box, .about, .projects {
   padding: 2rem;
@@ -114,48 +120,20 @@ a,
 
 .category {
   display: inline-block;
-  padding: 0.25rem 0.5rem;
-  font-size: 12px;
-  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  font-size: 11px;
   text-transform: uppercase;
-}
-
-.Web {
-  color: var(--vt-c-beige-light);
-  border-left: 2px solid var(--vt-c-beige-light);
-  text-shadow: 0.5px 0.5px 1px var(--vt-c-darkgrey);
-
-}
-
-.Video {
   color: var(--vt-c-beige-dark);
   border-left: 2px solid var(--vt-c-beige-dark);
-  text-shadow: 0.5px 0.5px 1px var(--vt-c-darkgrey);
 }
 
-.Photoshop, .Illustrator, .Indesign {
-  color: var(--vt-c-blue);
-  border-left: 2px solid var(--vt-c-blue);
-  text-shadow: 0.5px 0.5px 1px var(--vt-c-darkgrey);
-}
-
-/* .Illustrator {
-  color: #cb2f9a;
-  border-left: 2px solid #cb2f9a;
-}
-
-.Indesign {
-  color: #2fca80;
-  border-left: 2px solid #2fca80;
-} */
-
-.incomplete {
+/* .incomplete {
   color: #bc0c0c;
 }
 
 .complete {
   color: #14b314;
-}
+} */
 
 .portfolio-item a {
   font-size: 15px;
@@ -173,13 +151,16 @@ a,
 button {
   background-color: var(--vt-c-beige-light);
   box-shadow: 1px 1px 3px var(--vt-c-shadow-beige);
-  border: 0.5px solid var(--vt-c-beige-dark);
+  border: 2px solid var(--vt-c-beige-dark);
   padding: 5px 10px;
-  border-radius: 12px;
+  border-radius: 50px;
+  text-shadow: 1px 1px 2px var(--vt-c-shadow-beige);
 }
 
 button:hover {
+  background-color: var(--vt-c-beige-dark);
   color: var(--vt-c-white);
+  border-color: var(--vt-c-beige-dark);
   text-shadow: 1px 1px 2px var(--vt-c-darkgrey);
 }
 

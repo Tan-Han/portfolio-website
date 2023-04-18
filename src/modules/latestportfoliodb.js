@@ -3,10 +3,10 @@ import { ref } from 'vue'
 const getPortfolio = () => {
   const state = ref([
     {
-      id: "Logo",
+      id: "go-logo-img",
       title: "Green Office",
       description: "This is my portfolio 3",
-      category: "Illustrator",
+      category: "Grafisk design",
       image: "../src/assets/img/GreenOffice.png",
       link: "../src/assets/img/GreenOffice.png",
       tech: "Adobe Illustrator",
@@ -15,10 +15,10 @@ const getPortfolio = () => {
       complete: "incomplete"
     },
     {
-      id: "Billede",
+      id: "rings-img",
       title: "Rings",
       description: "This is my portfolio 3",
-      category: "Photoshop",
+      category: "Fotografi",
       image: "../src/assets/img/The Rings - Tanya - DK.png",
       link: "../src/assets/img/The Rings - Tanya - DK.png",
       tech: "Photoshop",
@@ -27,10 +27,10 @@ const getPortfolio = () => {
       complete: "incomplete"
     },
     {
-      id: "Logo",
+      id: "bd-dk-logo-img",
       title: "Bloddonorerne DK",
       description: "This is my portfolio 3",
-      category: "Illustrator",
+      category: "Grafisk design",
       image: "../src/assets/img/bddanmark.png",
       link: "../src/assets/img/bddanmark.png",
       tech: "Adobe Illustrator",

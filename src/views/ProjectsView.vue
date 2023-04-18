@@ -11,9 +11,12 @@
       
       <br>
     
-      <div>
-        <p>Future filter on category or a search bar</p>
-        <p>Future sort by date or completed</p>
+      <div class="filter-box">
+        <button type="button" class="filter-btn">All categories</button>
+        <button type="button" class="filter-btn">Web</button>
+        <button type="button" class="filter-btn">Fotografi</button>
+        <button type="button" class="filter-btn">Grafisk design</button>
+        <button type="button" class="filter-btn">Video</button>
       </div>
    
    </div> 
@@ -26,9 +29,9 @@
       </div>
 
       <div class="card-description-box">
-        <p class="category" :class="item.category">
+        <h5 class="category" :class="item.category">
           {{ item.category }}
-        </p>
+        </h5>
         <h4>{{ item.title }}</h4>
         <p>
           {{ item.description }}
@@ -53,10 +56,10 @@
         </template>
         
         <p>
-          TechStack: {{ item.tech }}
+          Programmer: {{ item.tech }}
         </p>
         <p>
-          Date: {{ item.date }}
+          Dato: {{ item.date }}
         </p>
       </div>
       <!-- part 3 -->
@@ -94,6 +97,28 @@ const { state  } = portfoliodb()
   font-size: 70px;
   text-align: center;
   padding-top: 30px;
+}
+
+.filter-box {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.filter-btn {
+  background-color: var(--vt-c-beige-light);
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.filter-btn:focus {
+  background-color: var(--vt-c-white);
+  border-color: var(--vt-c-blue);
 }
 
 </style>

@@ -11,16 +11,17 @@
         <h3>Jeg har arbejdet med flere projekter, bl.a. logo design, grafisk materiale til sociale medier, og design af hjemmesider. </h3>
       </div>
     </div>
-    <div class="arrow">
-    <img src="@/assets/img/arrowdown.svg" alt="" class="arrow-img">
-    </div>
     <div class="imagebox">
       <img src="@/assets/img/Billede---Homepage.png" alt="Billede" class="img-home">
     </div>
   </div>
-
+  <a href="#projects">
+    <div class="arrow">
+      <img src="@/assets/img/arrowdown.svg" alt="" class="arrow-img">
+    </div>
+  </a>
   <!-- Latest projects -->
-  <div class="latest-projects">
+  <div class="latest-projects" id="projects">
     <div class="latest-headline">
       <h2>Seneste projekter</h2>
     </div>
@@ -40,9 +41,9 @@
           </div>
 
           <div class="card-description-box">
-            <p class="category" :class="item.category">
+            <h5 class="category" :class="item.category">
               {{ item.category }}
-            </p>
+            </h5>
             <h4>{{ item.title }}</h4>
             <p>
               {{ item.description }}
@@ -67,10 +68,10 @@
             </template>
             
             <p>
-              TechStack: {{ item.tech }}
+              Programmer: {{ item.tech }}
             </p>
             <p>
-              Date: {{ item.date }}
+              Dato: {{ item.date }}
             </p>
           </div>
           <!-- part 3 -->
@@ -106,10 +107,10 @@
 }
 
 .welcometextbox {
-  max-width: 45%;
+  max-width: 50%;
   display: flex;
   align-items: center;
-  height: 75vh;
+  height: fit-content;
 }
 
 .welcometextbox div {
@@ -143,31 +144,32 @@
 }
 
 .imagebox {
-  width: 45%;
-  height: 75vh;
+  width: 50%;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 .img-home {
-  width: 70%;
+  width: 65%;
 }
 
 .arrow {
   display: flex;
   justify-content: center;
   align-items: end;
-  height: 75vh;
-  width: 10%;
-  padding-bottom: 0rem;
+  height: fit-content;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .arrow-img {
-  width: 100%;
+  width: 10%;
 }
 
-.arrow-img:hover {
-  opacity: 50%;
+.arrow:hover {
+background: linear-gradient(180deg, #ffffff00 0%, #21212180 100%);
 }
 
 /* Latest projects */
