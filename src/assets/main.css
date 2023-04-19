@@ -12,30 +12,30 @@ h1 {
 
 h2 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 900;
+  font-weight: 600;
   font-style: normal;
 }
 
 h3 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
 }
 
 h4 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
 h5 {
   font-family: proxima-nova, sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
 }
 
 
-.content-box, .about, .projects {
+.content-box, .about {
   padding: 2rem;
 }
 
@@ -149,18 +149,18 @@ a,
 }
 
 button {
-  background-color: var(--vt-c-beige-light);
+  background-color: var(--vt-c-blue);
   box-shadow: 1px 1px 3px var(--vt-c-shadow-beige);
-  border: 2px solid var(--vt-c-beige-dark);
+  border: 2px solid var(--vt-c-blue);
   padding: 5px 10px;
   border-radius: 50px;
-  text-shadow: 1px 1px 2px var(--vt-c-shadow-beige);
+  text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
 }
 
 button:hover {
-  background-color: var(--vt-c-beige-dark);
+  background-color: var(--vt-c-beige-light);
   color: var(--vt-c-white);
-  border-color: var(--vt-c-beige-dark);
+  border-color: var(--vt-c-beige-light);
   text-shadow: 1px 1px 2px var(--vt-c-darkgrey);
 }
 

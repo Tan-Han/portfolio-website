@@ -6,9 +6,9 @@
     <div :class="{ active: isActive }"></div>
 
     <!-- part 1 -->
-      <h1>Mine projekter</h1>
-      <p>Here is a list of my projects</p>
-      
+      <div class="project-headline">
+        <h1>Mine projekter</h1>
+      </div>
       <br>
     
       <div class="filter-box">
@@ -91,6 +91,11 @@ const { state  } = portfoliodb()
   padding-top: 100px;
 } */
 
+.project-headline {
+  margin: 0 10%;
+  border-bottom: 1px solid var(--vt-c-beige-dark);
+}
+
 .projects h1 {
   color: var(--vt-c-blue);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
@@ -106,11 +111,12 @@ const { state  } = portfoliodb()
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  padding-top: 3rem;
 }
 
 
 .filter-btn {
-  background-color: var(--vt-c-beige-light);
+  background-color: var(--vt-c-blue);
   margin-right: 10px;
   font-size: 18px;
   font-weight: 500;
@@ -118,7 +124,8 @@ const { state  } = portfoliodb()
 
 .filter-btn:focus {
   background-color: var(--vt-c-white);
-  border-color: var(--vt-c-blue);
+  border: 2px solid var(--vt-c-blue);
+
 }
 
 </style>

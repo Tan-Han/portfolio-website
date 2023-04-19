@@ -146,8 +146,9 @@ nav a:first-of-type {
 }
 
 footer {
-  margin: 20px 20px;
+  margin: 100px 20px 30px 20px;
   background-color: var(--vt-c-beige-light);
+  box-shadow: 2px 2px 5px var(--vt-c-shadow-beige);
 }
 
 @media (min-width: 1024px) {

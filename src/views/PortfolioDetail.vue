@@ -1,47 +1,37 @@
 <template>
-  <div class="content-box">
-     test : {{ $route.params.id  }} + {{ id }}
-    <div>
-      <!-- v-for on state -->
-    <!--   <div class="portfolio-item" v-for="item in portfolioDetails" :key="item"> -->
-      <div class="portfolio-item" v-if="portfolioDetails" >
-        <p class="category" :class="portfolioDetails.category">
-          {{ portfolioDetails.category }}
-        </p>
-        <h4>{{ portfolioDetails.title }} - id:  {{ portfolioDetails.id }}</h4>
-        <p>
-          {{ portfolioDetails.description }}
-        </p>
-        <img :src="portfolioDetails.image" alt="image" width="200" height="200">
-        
-        <br>
-        LinkedIn:
-        <a :href="portfolioDetails.link">
-          {{ portfolioDetails.link }}
-        </a>
-        <br>
-        Github:
-        <a :href="portfolioDetails.github">
-          {{ portfolioDetails.github }}
-        </a>
-        <p>
-          TechStack: {{ portfolioDetails.tech }}
-        </p>
-        <p>
-          Date: {{ portfolioDetails.date }}
-        </p>
-        <p >
-          Completed: <span :class="portfolioDetails.complete">{{ portfolioDetails.completed }}</span>
-        </p>
-        <br>
+  <div v-if="portfolioDetails">
+    <div class="content-box">
+      <div class="project-headline">
+        <h1>{{ portfolioDetails.title }}</h1>
       </div>
-
-      <div v-else>Loading...</div>
-      
-      <button @click="goBack()">Go Back</button>
-      Details test {{ props.id }}
+      <div class="info-box">
+        {{ portfolioDetails.category }}
+        Date: {{ portfolioDetails.date }}
+      </div>
+  
+      <div class="project-content-one">
+        <div class="project-img-box">
+          <img :src="portfolioDetails.image" alt="image" width="200" height="200">
+        </div>
+        <div class="project-mini-description-box">
+          {{ portfolioDetails.description }}
+        </div>
+      </div>
+    
+    </div>
+    <div class="decription-box">
+      <div class="description">
+  
+      </div>
+      <div class="tech">
+        {{ portfolioDetails.tech }}
+      </div>
     </div>
   </div>
+
+  <div class="loading" v-else>Loading...</div>
+  
+  <button @click="goBack()">Go Back</button>
 </template>
 
 
@@ -72,6 +62,8 @@ const router = useRouter()
   } 
 </script>
 
-<style lang="scss">
+<style scoped>
+
+
 
 </style>

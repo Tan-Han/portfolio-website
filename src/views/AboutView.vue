@@ -10,7 +10,7 @@
       <div class="about-text-box">
         <div>
           <div class="picture-box">
-            <img src="@/assets/img/Logo.svg" alt="">
+            <img src="@/assets/img/CV Billede 5.png" alt="">
           </div>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores, non iure cum exercitationem dolor ipsum corrupti obcaecati a. Repellendus exercitationem autem pariatur commodi dolor repellat placeat veritatis animi sunt!</p>
           <div class="btn-box">
@@ -38,6 +38,11 @@ const isActive = ref(true)
   /* padding-top: 100px; */
 }
 
+.about-headline {
+  margin: 0 30%;
+  border-bottom: 1px solid var(--vt-c-beige-dark);
+}
+
 .about h1 {
   color: var(--vt-c-blue);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
@@ -50,6 +55,7 @@ const isActive = ref(true)
   display: flex;
   align-items: center;
   height: auto;
+  padding-top: 50px;
 }
 
 .about-text-box {
@@ -74,6 +80,7 @@ const isActive = ref(true)
 .picture-box img {
   height: auto;
   width: auto;
+  border-radius: 100%;
 }
 
 .btn-box {
@@ -88,6 +95,7 @@ const isActive = ref(true)
   padding: 10px 20px;
   margin-right: 10px;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .linked-btn {

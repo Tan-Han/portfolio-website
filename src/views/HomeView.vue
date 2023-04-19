@@ -4,11 +4,11 @@
     <div class="welcometextbox">
       <div>
         <h1>Velkommen</h1>
-        <h2 class="navn">Mit navn er...</h2>
-        <h2>Tanya R. S. Hansen</h2>
-        <h3 class="miniheadline">Jeg er...</h3>
-        <h3>Multimediedesigner, og min passion er at føre mine kreative idéer ud i livet.</h3>
-        <h3>Jeg har arbejdet med flere projekter, bl.a. logo design, grafisk materiale til sociale medier, og design af hjemmesider. </h3>
+        <div class="description-box-home">
+          <h2>Mit navn er <span>Tanya R. S. Hansen</span></h2>
+          <h3>Jeg er er <span>multimediedesigner</span>, og min passion er at føre mine kreative idéer ud i livet.</h3>
+          <h3>Jeg har arbejdet med flere projekter, bl.a. logo design, grafisk materiale til sociale medier, og design af hjemmesider. </h3>
+        </div>
       </div>
     </div>
     <div class="imagebox">
@@ -114,33 +114,49 @@
 }
 
 .welcometextbox div {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .welcometextbox h1 {
-  color: var(--vt-c-blue);
-  text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
-  font-size: 70px;
+  background: linear-gradient(333deg, #c9ebf2 0%, #cdbcaf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
 }
-.welcometextbox h2 {
+.description-box-home {
+  background-color: #dcd8d0;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 100%;
+  box-shadow: 2px 2px 5px var(--vt-c-shadow-beige);
+}
+.description-box-home h2 {
   color: var(--vt-c-darkgrey);
-  font-size: 20px;
-  padding-top: 0.5rem;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.welcometextbox .navn {
+h2 span {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18;
+  text-decoration: underline 2px;
+  text-decoration-color: var(--vt-c-beige-dark);
+}
+
+.description-box-home h3 {
+  padding-top: 0.5rem;
+  font-size: 14px;
+  color: var(--vt-c-darkgrey);
   font-style: italic;
 }
 
-.welcometextbox h3 {
-  padding-top: 0.5rem;
-  font-size: 16px;
-  color: var(--vt-c-darkgrey);
-}
-
-.welcometextbox .miniheadline {
-  font-style: italic;
-  padding-top: 1rem;
+h3 span {
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline 2px;
+  text-decoration-color: var(--vt-c-beige-dark);
 }
 
 .imagebox {
@@ -160,8 +176,8 @@
   align-items: end;
   height: fit-content;
   width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .arrow-img {
@@ -169,14 +185,14 @@
 }
 
 .arrow:hover {
-background: linear-gradient(180deg, #ffffff00 0%, #21212180 100%);
+background: linear-gradient(180deg, #ffffff00 0%, #DCD8D0 80%);
 }
 
 /* Latest projects */
 
 .latest-projects {
   background-color: var(--vt-c-beige-light);
-  padding: 0 70px;
+  padding: 30px 70px;
 }
 
 .latest-headline {
@@ -189,10 +205,9 @@ background: linear-gradient(180deg, #ffffff00 0%, #21212180 100%);
 .latest-headline h2 {
   font-size: 40px;
   font-weight: 600;
-  padding-top: 30px;
   padding-bottom: 15px;
-  color: var(--vt-c-blue);
-  text-shadow: 1.5px 1.5px 3px var(--vt-c-darkgrey);
+  color: var(--vt-c-white);
+  text-shadow: 1.5px 1.5px 3px var(--vt-c-shadow-beige);
 }
 
 .projects {
