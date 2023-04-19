@@ -29,7 +29,7 @@ const getPortfolio = () => {
     {
       id: "rings-img",
       title: "Rings",
-      description: "This is my portfolio 3",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       category: "Fotografi",
       image: "../src/assets/img/The Rings - Tanya - DK.png",
       link: "../src/assets/img/The Rings - Tanya - DK.png",

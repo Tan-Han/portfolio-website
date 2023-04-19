@@ -9,12 +9,24 @@
     </div>
       <div class="about-text-box">
         <div>
-          <div class="picture-box">
-            <img src="@/assets/img/CV Billede 5.png" alt="">
+          <div class="flex w-100 justify-center">
+            <div class="picture-box">
+              <img src="@/assets/img/CV-Billede-5.png" alt="">
+            </div>
           </div>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum maiores, non iure cum exercitationem dolor ipsum corrupti obcaecati a. Repellendus exercitationem autem pariatur commodi dolor repellat placeat veritatis animi sunt!</p>
+          <div class="text-box">
+            <div class="text">
+              <h2 class="navn">Tanya Reedtz Shkodra Hansen</h2>
+              <p>Med en kombination af akademisk viden og praktisk erfaring er jeg, på trods af min status som nyuddannet, udstyret med gode kompetencer inden for digital markedsføring og grafisk design.</p>
+              <p>Med en indsigtsfuld og kreativ fremgangsmåde, brænder jeg for at levere engagerende budskaber til kunder og interessenter, gennem visuel kommunikation.</p>
+              <p>Med et åbent sind og stor entusiasme tager jeg gerne imod nye udfordringer, og fører projekter til ende med stor eftertænksomhed og kreativitet.</p>
+            </div>
+          </div>
           <div class="btn-box">
-            <button class="cv-btn">Download CV</button>
+            
+            <a href="@/assets/CV.pdf" download="CV.pdf">
+              <button class="cv-btn">Download CV</button>
+            </a>
             <a href="https://www.linkedin.com/in/trshansen/"><button style='font-size:23px' class="linked-btn"><i class='fab fa-linkedin-in'></i></button></a>
           </div>
         </div>
@@ -54,7 +66,7 @@ const isActive = ref(true)
 .about-content {
   display: flex;
   align-items: center;
-  height: auto;
+  height: 53vh;
   padding-top: 50px;
 }
 
@@ -69,16 +81,45 @@ const isActive = ref(true)
   max-width: 100%;
 }
 
-.picture-box {
+.text-box {
   width: 100%;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  background-color: var(--vt-c-beige-light);
+  padding: 30px;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px var(--vt-c-shadow-beige);
+}
+
+.about-text-box h2 {
+  color: var(--vt-c-darkgrey);
+  font-size: 40px;
+  text-align: center;
+}
+
+.about-text-box p {
+  padding-bottom: 10px;
+}
+
+.picture-box {
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(333deg, #c9ebf2 0%, #cdbcaf 100%);
+  border-radius: 100%;
+  padding: 8px;
+  box-shadow: 1px 1px 5px var(--vt-c-shadow-beige);
 }
 
 .picture-box img {
-  height: auto;
+  height: 125px;
   width: auto;
   border-radius: 100%;
 }
@@ -87,13 +128,13 @@ const isActive = ref(true)
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 1rem 0;
 }
 
 .cv-btn {
   height: fit-content;
   padding: 10px 20px;
-  margin-right: 10px;
+  margin-right: 1rem;
   font-size: 18px;
   font-weight: 600;
 }
@@ -101,7 +142,6 @@ const isActive = ref(true)
 .linked-btn {
   height: fit-content;
   padding: 5px 15px;
-  margin-right: 10px;
 }
 
 .video-cv-box {
@@ -115,6 +155,10 @@ const isActive = ref(true)
 .video-cv {
   box-shadow: 1px 1px 5px var(--vt-c-shadow-beige);
   border: 10px solid var(--vt-c-beige-dark);
+}
+
+@media (max-width: 1280px) {
+  
 }
 
 </style>

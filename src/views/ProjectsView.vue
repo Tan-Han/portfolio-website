@@ -97,7 +97,7 @@ const { state  } = portfoliodb()
 }
 
 .projects h1 {
-  color: var(--vt-c-blue);
+  color: var(--vt-c-beige-light);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
   font-size: 70px;
   text-align: center;

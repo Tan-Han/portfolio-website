@@ -1,37 +1,59 @@
 <template>
+  <button @click="goBack()" class="back">Tilbage</button>
   <div v-if="portfolioDetails">
     <div class="content-box">
       <div class="project-headline">
         <h1>{{ portfolioDetails.title }}</h1>
       </div>
       <div class="info-box">
-        {{ portfolioDetails.category }}
-        Date: {{ portfolioDetails.date }}
+        <div class="date">
+          Dato: {{ portfolioDetails.date }}
+        </div>
+        <div class="category">
+          {{ portfolioDetails.category }}
+        </div>
       </div>
-  
-      <div class="project-content-one">
+
+      <div  class="project-box">
         <div class="project-img-box">
           <img :src="portfolioDetails.image" alt="image" width="200" height="200">
         </div>
-        <div class="project-mini-description-box">
-          {{ portfolioDetails.description }}
+
+        <div class="description-box">
+          <div class="project-description-box">
+            <div class="description">
+              {{ portfolioDetails.description }}
+            </div>
+            <div class="tech">
+              <h2>Programmer</h2>
+              {{ portfolioDetails.tech }}
+            </div>
+            <div class="links">
+              <h2>Links</h2>
+              <div class="icons">
+                <a href="#">
+                  <i style='font-size:24px' class='fas'>&#xf03e;</i>
+                </a>
+                <a href="#">
+                  <i style='font-size:24px' class='fas'>&#xf03e;</i>
+                </a>
+                <a href="#">
+                  <i style='font-size:24px' class='fas'>&#xf03e;</i>
+                </a>
+              </div>
+            </div> 
+          </div>
+<!--           
+          <div class="otherstuff">
+          </div> -->
         </div>
       </div>
-    
-    </div>
-    <div class="decription-box">
-      <div class="description">
-  
-      </div>
-      <div class="tech">
-        {{ portfolioDetails.tech }}
-      </div>
+      
     </div>
   </div>
 
   <div class="loading" v-else>Loading...</div>
   
-  <button @click="goBack()">Go Back</button>
 </template>
 
 
@@ -63,7 +85,121 @@ const router = useRouter()
 </script>
 
 <style scoped>
+.content-box {
+  max-width: 100vw;
+  height: fit-content;
+  padding: 0 2rem;
+}
+
+.project-headline {
+  margin: 0 20%;
+  border-bottom: 1px solid var(--vt-c-beige-dark);
+}
+
+.project-headline h1 {
+  color: var(--vt-c-blue);
+  text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
+  font-size: 70px;
+  text-align: center;
+  /* padding-top: 1rem; */
+}
+
+.info-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.date {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.project-box {
+  width: 100%;
+  display: flex;
+}
+
+.project-img-box {
+ width: 80%;
+ height: 80vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 2rem 0;
+ overflow: hidden;
+}
+
+.project-img-box img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.description-box {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.project-description-box {
+  width: 100%;;
+  /* display: flex; */
+}
+
+.description {
+  width: 100%;
+  height: 50%;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  background-color: var(--vt-c-blue);
+}
+
+/* .otherstuff {
+  width: 50%; 
+  margin-left: 1rem;
+} */
 
 
+.tech {
+ background-color: var(--vt-c-beige-dark);
+ width: 100%;
+ height: fit-content;
+ padding: 1rem 2rem;
+ border-radius: 12px;
+}
+
+.links {
+  background-color: var(--vt-c-beige-light);
+  width: 100%;
+  height: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--vt-c-darkgrey);
+  font-weight: 600;
+  font-size: 20px;
+  transition: 0.4s;
+  padding-right: 10px;
+  text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
+}
+
+.links a:hover {
+  color: var(--vt-c-blue);
+  text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
+}
+
+.back {
+  width: fit-content;
+  margin: 2rem 2rem 0 2rem;
+}
 
 </style>

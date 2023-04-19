@@ -74,12 +74,13 @@ a,
   border-radius: 12px; 
   border: 1px solid var(--vt-c-beige-dark);
   box-shadow: 1px 1px 10px var(--vt-c-shadow-beige); 
-  max-width: 400px;
+  max-width: 300px;
   background-color: var(--vt-c-white);
 }
 
 .card-description-box {
-  height: 100px;
+  height: fit-content;
+  max-width: 300px;
   padding: 0px 20px;
 }
 
@@ -90,6 +91,11 @@ a,
 
 .card-description-box p {
   font-size: 14px;
+  display: -webkit-box;
+  max-width: 300px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .imgbox {
@@ -107,6 +113,10 @@ a,
 .link-box {
   height: 100px;
   padding: 10px 20px;
+}
+
+.link-box a {
+  text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
 }
 
 .link-box a:hover {

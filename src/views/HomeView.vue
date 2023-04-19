@@ -111,6 +111,7 @@
   display: flex;
   align-items: center;
   height: fit-content;
+  padding-top: 20px;
 }
 
 .welcometextbox div {
@@ -132,7 +133,7 @@
 }
 .description-box-home h2 {
   color: var(--vt-c-darkgrey);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -165,6 +166,7 @@ h3 span {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-top: 20px;
 }
 .img-home {
   width: 65%;
@@ -176,7 +178,6 @@ h3 span {
   align-items: end;
   height: fit-content;
   width: 100%;
-  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
