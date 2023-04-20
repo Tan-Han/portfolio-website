@@ -1,15 +1,14 @@
 <template>
   <div class="about">
+    <div class="h-box">
+      <div class="about-headline">
+        <h1>Om mig</h1>
+      </div>
+    </div>
     <div class="about-content">
       <div class="video-cv-box">
-        <div>
-          <div class="about-headline">
-            <h1>Om mig</h1>
-          </div>
-          <div class="video-box">
-            <iframe width="480" height="270" src="https://www.youtube.com/embed/RPa4h2ccP0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video-cv"></iframe>
-          </div>
-
+        <div class="video-box">
+          <iframe width="565" height="325" src="https://www.youtube.com/embed/RPa4h2ccP0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video-cv"></iframe>
         </div>
       </div>
       <div class="about-text-box">
@@ -59,22 +58,24 @@ const isActive = ref(true)
 }
 
 .about-headline {
-  margin-bottom: 12%;
   border-bottom: 1px solid #cdbcaf;
-  width: fit-content;
+  max-width: 100%;
+  padding: 0 20%;
+  margin-bottom: 2.5rem;
 }
 
 .about h1 {
   color: var(--vt-c-blue);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
   font-size: 70px;
-  text-align: left;
+  text-align: center;
   padding-top: 10px;
 }
 
 .about-content {
   display: flex;
   height: fit-content;
+  margin: 0 1rem;
 }
 
 .about-text-box {
@@ -82,10 +83,13 @@ const isActive = ref(true)
   height: fit-content;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding-left: 1rem;
+
 }
 
 .about-text-box div {
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .text-box {
@@ -98,7 +102,7 @@ const isActive = ref(true)
 .text {
   background-color: var(--vt-c-beige-light);
   padding: 20px 30px;
-  width: 80%;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 2px 2px 5px var(--vt-c-shadow-beige);
 }
@@ -107,6 +111,7 @@ const isActive = ref(true)
   color: var(--vt-c-darkgrey);
   font-size: 40px;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .about-text-box p {
@@ -154,16 +159,18 @@ const isActive = ref(true)
 
 .video-cv-box {
   width: 50%;
-  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5rem;
 }
 
 .video-box {
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .video-cv {
@@ -177,6 +184,46 @@ const isActive = ref(true)
     font-size: 25px;
   }
   
+}
+
+@media (max-width: 1080px) {
+
+.about-text-box h2 {
+  font-size: 20px;
+}
+
+}
+
+@media (max-width: 965px) {
+
+.about-content {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text-box {
+  max-width: 100%;
+  padding-left: 0;
+}
+
+.video-cv-box {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+}
+
+@media (max-width: 580px) {
+ .about h1 {
+  font-size: 50px;
+ }
+}
+
+@media (max-width: 500px) {
+  .about-text-box h2 {
+    font-size: 16px;
+  }
 }
 
 </style>

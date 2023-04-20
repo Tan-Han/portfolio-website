@@ -52,25 +52,13 @@ import { ref } from 'vue';
 
 let show = ref(true);
 
-let showHide = () => {
-  show.value = !show.value;
-}
-
-
-let dataStuff = 'Hello World';
-let myArray = [1, 2, 3, 4, 5];
-let products = [
-  { name: 'Apple', price: 1 },
-  { name: 'Orange', price: 2 }
-];
-
 </script>
 
 <style>
 
 .content-box {
   width: 100vw;
-  height: 70vh;
+  height: fit-content;
 }
 
 .contact-headline {
@@ -163,6 +151,11 @@ let products = [
 }
 
 .icon i {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
 }
 
@@ -239,6 +232,138 @@ let products = [
 
   .info h4 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 970px) {
+  .contact-headline {
+    margin: 0 20% 1rem 20%;
+  }
+
+  .contact-headline h1 {
+    font-size: 50px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .contact-headline h1 {
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 635px) {
+  .card {
+    width: 400px;
+    height: 550px;
+  }
+
+  .background {
+    width: 400px;
+    height: 550px;
+  }
+
+  .shimmer {
+    max-width: 400px;
+  }
+
+  .card-description {
+    display: block;
+  }
+
+  .contact-info {
+    width: fit-content;
+  }
+
+  .logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .card-titel {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  .card-titel h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 580px) {
+  .contact-headline {
+    margin: 0 10% 1rem 10%;
+  }
+
+}
+
+@media (max-width: 485px) {
+  .card {
+    width: 350px;
+    height: 500px;
+  }
+
+  .background {
+    width: 350px;
+    height: 500px;
+  }
+
+  .shimmer {
+    max-width: 350px;
+  }
+
+  .card-description {
+    display: block;
+  }
+
+  .contact-info {
+    width: fit-content;
+  }
+
+  .logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo-box img {
+    width: 50%;
+  }
+
+  .card-titel {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+
+  .card-titel h2 {
+    font-size: 20px;
+  }
+
+  .card-titel h1 {
+    font-size: 18px;
+  }
+
+  .info h4 {
+    font-size: 15px;
+    color: var(--vt-c-darkgrey);
+  }
+}
+
+@media (max-width: 445px) {
+  .contact-headline {
+    margin: 0 0 1rem 0;
+  }
+
+}
+
+@media (max-width: 370px) {
+  .contact-headline h1 {
+    font-size: 30px;
   }
 
 }

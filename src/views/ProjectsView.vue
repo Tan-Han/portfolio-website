@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div class="projects" id="all">
    <!--  {{ state }} -->
    <div>
     <!-- part 0 -->
@@ -12,11 +12,11 @@
       <br>
     
       <div class="filter-box">
-        <button type="button" class="filter-btn">All categories</button>
-        <button type="button" class="filter-btn">Web</button>
-        <button type="button" class="filter-btn">Fotografi</button>
-        <button type="button" class="filter-btn">Grafisk design</button>
-        <button type="button" class="filter-btn">Video</button>
+        <button type="button" class="filter-btn" @click="changeCategory('All')">All categories</button>
+        <button type="button" class="filter-btn" @click="changeCategory('Web')" value="Web">Web</button>
+        <button type="button" class="filter-btn" @click="changeCategory('Fotografi')" value="Fotografi">Fotografi</button>
+        <button type="button" class="filter-btn" @click="changeCategory('Grafisk design')" value="Grafisk design">Grafisk design</button>
+        <button type="button" class="filter-btn" @click="changeCategory('Video')" value="Video">Video</button>
       </div>
    
    </div> 
@@ -82,12 +82,32 @@ import portfoliodb from '../modules/portfoliodb';
 const isActive = ref(true)
 
 // part 1 - get state from portfoliodb
-const { state  } = portfoliodb()
-
+let { state  } = portfoliodb()
+const originalState = state.value;
 
 // Filter
+  var selector 
+
+  function changeCategory(category) {
+    if(category != "All"){
+      selector = category
+      state.value = originalState.filter(filterFunc)
+    } else{
+      console.log("meep")
+      state.value = originalState
+    }
+  }
 
 
+  var filterFunc = (item) => { 
+			var category = item.category;
+			
+			if(category === selector) {
+				return true;
+			} else {
+				return false;
+			};
+		};
 
 </script>
  
@@ -122,7 +142,7 @@ const { state  } = portfoliodb()
 
 .filter-btn {
   background-color: var(--vt-c-blue);
-  margin-right: 10px;
+  margin: 10px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -131,6 +151,24 @@ const { state  } = portfoliodb()
   background-color: var(--vt-c-white);
   border: 2px solid var(--vt-c-blue);
 
+}
+
+@media (max-width: 810px) {
+  .projects h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 635px) {
+  .projects h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .projects h1 {
+    font-size: 35px;
+  }
 }
 
 </style>
