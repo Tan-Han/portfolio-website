@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="about-text-box">
-        <div>
+        <div class="box">
           <div class="flex w-100 justify-center align-items-center">
             <div class="picture-box">
               <img src="@/assets/img/CV-Billede-5.png" alt="">
@@ -30,6 +30,9 @@
             
             <a href="https://indd.adobe.com/view/publication/750000b5-b029-4e7a-919b-e5e3f74aa297/1/publication-web-resources/pdf/CV.pdf" download="CV.pdf" target="_blank">
               <button class="cv-btn">Download CV</button>
+            </a>
+            <a href="/contact" target="_blank">
+              <button class="cv-btn">Kontakt mig</button>
             </a>
             <a href="https://www.linkedin.com/in/trshansen/" target="_blank">
               <button class="cv-btn">LinkedIn</button>
@@ -60,8 +63,9 @@ const isActive = ref(true)
 .about-headline {
   border-bottom: 1px solid #cdbcaf;
   max-width: 100%;
-  padding: 0 20%;
-  margin-bottom: 2.5rem;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 3rem;
 }
 
 .about h1 {
@@ -88,7 +92,7 @@ const isActive = ref(true)
 
 }
 
-.about-text-box div {
+.about-text-box .box {
   max-width: 95%;
 }
 
@@ -142,19 +146,20 @@ const isActive = ref(true)
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
+  width: 100%;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+
+.btn-box a {
+  margin: 0.5rem 0.5rem;
 }
 
 .cv-btn {
-  height: fit-content;
-  padding: 10px 20px;
-  margin-right: 1rem;
+  padding: 10px 10px;
   font-size: 18px;
   font-weight: 600;
-}
-
-.linked-btn {
-  height: fit-content;
-  padding: 5px 15px;
+  width: 160px;
 }
 
 .video-cv-box {
@@ -162,7 +167,7 @@ const isActive = ref(true)
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3.75rem;
 }
 
 .video-box {
@@ -178,12 +183,54 @@ const isActive = ref(true)
   border: 10px solid var(--vt-c-beige-dark);
 }
 
+/* Media Queries */
+
+@media (min-width: 1281px) {
+
+  .about h1 {
+    font-size: 80px;
+  }
+
+  .text {
+    padding: 25px 35px;
+  }
+
+  .about-text-box h2 {
+    font-size: 45px;
+  }
+
+  .picture-box {
+    margin-bottom: 2rem;
+    padding: 10px;
+  }
+
+  .picture-box img {
+    height: 175px;
+  }
+
+  .video-cv-box {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 7rem;
+  }
+}
+
 @media (max-width: 1280px) {
 
   .about-text-box h2 {
     font-size: 25px;
   }
   
+}
+
+@media (max-width: 1250px) {
+
+  .video-cv-box {
+    margin-top: 0;
+  }
+
 }
 
 @media (max-width: 1080px) {
@@ -196,31 +243,56 @@ const isActive = ref(true)
 
 @media (max-width: 965px) {
 
-.about-content {
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
+  .about-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-text-box {
+    max-width: 100%;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .video-cv-box {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.about-text-box {
-  max-width: 100%;
-  padding-left: 0;
+@media (max-width: 830px) {
+  .about-headline {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 2rem;
 }
 
-.video-cv-box {
-  margin-top: 2rem;
-  width: 100%;
+.about h1 {
+  font-size: 60px;
+}
 }
 
-}
+@media (max-width: 590px) {
+  .about-headline {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2rem;
+  }
 
-@media (max-width: 580px) {
  .about h1 {
   font-size: 50px;
  }
 }
 
 @media (max-width: 500px) {
+  .about-headline {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2rem;
+  }
+  
   .about-text-box h2 {
     font-size: 16px;
   }

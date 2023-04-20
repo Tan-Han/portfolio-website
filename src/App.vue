@@ -4,7 +4,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <img alt="TH logo" class="logo" src="@/assets/img/Logo-ny.svg" width="75" height="75" />
+    <a href="/">
+      <img alt="TH logo" class="logo" src="@/assets/img/Logo-ny.svg" width="75" height="75" />
+    </a>
 
     <div class="wrapper">
 
@@ -19,7 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <!-- must do this for fade out to work -->
   <RouterView v-slot="{ Component }">
-    <transition name="scale">
+    <transition name="fade">
       <component :is="Component" />
     </transition>
   </RouterView>
@@ -51,16 +53,16 @@ import { RouterLink, RouterView } from 'vue-router'
 
 /* Transitions start */
 
-.scale-enter-active,
-.scale-leave-active {
-  transition: all 0.5s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
 }
 
-.scale-enter-from,
-.scale-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-  transform: scale(0.9);
 }
+
 
 /* Transition end */
 

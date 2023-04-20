@@ -62,7 +62,7 @@ let show = ref(true);
 }
 
 .contact-headline {
-  margin: 0 30% 1rem 30%;
+  margin: 0 30% 6rem 30%;
   border-bottom: 1px solid var(--vt-c-beige-dark);
 }
 
@@ -71,7 +71,7 @@ let show = ref(true);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
   font-size: 60px;
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 
 .card-box {
@@ -196,10 +196,16 @@ let show = ref(true);
   100% {-webkit-mask-position:left}
 }
 
+/* Media Queries */
+
 @media (max-width: 1285px) {
 
   .contact-headline {
-    margin: 0 25% 1rem 25%;
+    margin: 0 25% 2rem 25%;
+  }
+
+  .contact-headline h1 {
+    padding-top: 0.5rem;
   }
 
   .background {

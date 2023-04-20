@@ -1,73 +1,76 @@
 <template>
-  <div class="projects" id="all">
+  <div class="projects">
    <!--  {{ state }} -->
-   <div>
-    <!-- part 0 -->
-    <div :class="{ active: isActive }"></div>
+    <div>
+      <!-- part 0 -->
+      <div :class="{ active: isActive }"></div>
 
-    <!-- part 1 -->
-      <div class="project-headline">
-        <h1>Mine projekter</h1>
-      </div>
-      <br>
-    
-      <div class="filter-box">
-        <button type="button" class="filter-btn" @click="changeCategory('All')">All categories</button>
-        <button type="button" class="filter-btn" @click="changeCategory('Web')" value="Web">Web</button>
-        <button type="button" class="filter-btn" @click="changeCategory('Fotografi')" value="Fotografi">Fotografi</button>
-        <button type="button" class="filter-btn" @click="changeCategory('Grafisk design')" value="Grafisk design">Grafisk design</button>
-        <button type="button" class="filter-btn" @click="changeCategory('Video')" value="Video">Video</button>
-      </div>
-   
-   </div> 
+      <!-- part 1 -->
+        <div class="project-headline">
+          <h1>Mine projekter</h1>
+        </div>
+        <br>
+      
+        <div class="filter-box">
+          <button type="button" class="filter-btn" @click="changeCategory('All')">All categories</button>
+          <button type="button" class="filter-btn" @click="changeCategory('Web')" value="Web">Web</button>
+          <button type="button" class="filter-btn" @click="changeCategory('Fotografi')" value="Fotografi">Fotografi</button>
+          <button type="button" class="filter-btn" @click="changeCategory('Grafisk design')" value="Grafisk design">Grafisk design</button>
+          <button type="button" class="filter-btn" @click="changeCategory('Video')" value="Video">Video</button>
+        </div>
+    </div> 
    <br>
 
-   <div class="portfolio-container">
-   <div class="portfolio-item"  v-for="item in state" :key="item">
-      <div class="imgbox">
-        <img :src="item.image" alt="image" class="portfolio-card-img">
-      </div>
+    <div class="portfolio-container">
+      <div class="portfolio-item"  v-for="item in state" :key="item">
+        <div class="imgbox">
+          <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}" class="img-link">
+            <img :src="item.image" alt="image" class="portfolio-card-img">
+          </RouterLink>
+        </div>
 
-      <div class="card-description-box">
-        <h5 class="category" :class="item.category">
-          {{ item.category }}
-        </h5>
-        <h4>{{ item.title }}</h4>
-        <p>
-          {{ item.description }}
-        </p>
-      </div>
+        <div class="card-description-box">
+          <h5 class="category" :class="item.category">
+            {{ item.category }}
+          </h5>
+          <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}" class="card-headline">
+            <h2>{{ item.title }}</h2>
+          </RouterLink>
+          <p>
+            {{ item.description }}
+          </p>
+        </div>
 
-      <div class="link-box">
-        <template v-if="item.imagelink">
-          <a :href="item.imagelink" :if="item.imagelink" target="_blank">
-            <i class="material-icons">image</i>
-          </a>
-        </template>
-        <template v-if="item.github">
-          <a :href="item.github" :if="item.github" target="_blank">
-            <i class="fa">&#xf092;</i>
-          </a>
-        </template>
-        <template v-if="item.youtube">
-          <a :href="item.youtube" :if="item.youtube" target="_blank">
-            <i class="material-icons">smart_display</i>
-          </a>
-        </template>
-        
-        <p>
-          Programmer: {{ item.tech }}
-        </p>
-        <p>
-          Dato: {{ item.date }}
-        </p>
+        <div class="link-box">
+          <template v-if="item.imagelink">
+            <a :href="item.imagelink" :if="item.imagelink" target="_blank" class="icon-link">
+              <i class="material-icons">image</i>
+            </a>
+          </template>
+          <template v-if="item.github">
+            <a :href="item.github" :if="item.github" target="_blank" class="icon-link">
+              <i class="fa">&#xf092;</i>
+            </a>
+          </template>
+          <template v-if="item.youtube">
+            <a :href="item.youtube" :if="item.youtube" target="_blank" class="icon-link">
+              <i class="material-icons">smart_display</i>
+            </a>
+          </template>
+          
+          <p>
+            Programmer: {{ item.tech }}
+          </p>
+          <p>
+            Dato: {{ item.date }}
+          </p>
+        </div>
+        <!-- part 3 -->
+        <div class="btn-box">
+          <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}"><button class="see-more">Se mere</button></RouterLink>
+        </div>     
       </div>
-      <!-- part 3 -->
-      <div class="btn-box">
-         <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}"><button class="see-more">Se mere</button></RouterLink>
-      </div>     
     </div>
-  </div>
 
 
   </div>
@@ -152,6 +155,8 @@ const originalState = state.value;
   border: 2px solid var(--vt-c-blue);
 
 }
+
+/* Media Queries */
 
 @media (max-width: 810px) {
   .projects h1 {

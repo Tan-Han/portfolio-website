@@ -142,7 +142,7 @@ const router = useRouter()
 
 .project-img-box {
  width: 50%;
- height: 80vh;
+ max-height: 80vh;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -216,6 +216,94 @@ const router = useRouter()
 .back {
   width: fit-content;
   margin: 2rem 2rem 0 2rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+  .project-headline {
+    margin: 0 15%;
+  }
+
+  .project-img-box {
+    width: 50%;
+    max-height: fit-content;
+  }
+
+  .project-img-box img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 795px) {
+  .project-box {
+    flex-direction: column;
+  }
+
+  .project-headline {
+    margin: 0 10%;
+  }
+
+  .project-headline h1 {
+    font-size: 65px;
+  }
+  
+  .project-img-box {
+    width: 100%;
+    padding: 0 4rem 1rem 4rem;
+    height: fit-content;
+  }
+
+  .project-img-box img {
+    width: auto;
+    height: auto;
+  }
+  
+  .description-box {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .project-description-box {
+    width: 100%;
+    /* display: flex; */
+  }
+}
+
+@media (max-width: 660px) {
+  .project-headline {
+    margin: 0 5%;
+  }
+
+  .project-headline h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-headline {
+    margin: 0 10%;
+  }
+
+  .project-headline h1 {
+    font-size: 65px;
+  }
+
+  .back {
+    padding: 10px 20px;
+    margin: 3rem 3rem 0 2rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .project-headline {
+    margin: 2rem 10%;
+  }
+
+  .project-headline h1 {
+    font-size: 60px;
+  }
 }
 
 </style>
