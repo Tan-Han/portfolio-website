@@ -8,21 +8,9 @@ const getPortfolio = () => {
       description: "This is my portfolio 3",
       category: "Grafisk design",
       image: "../assets/img/GreenOffice.png",
-      link: "../assets/img/GreenOffice.png",
+      imagelink: "../assets/img/GreenOffice.png",
       tech: "Adobe Illustrator",
-      date: "2021-03-26",
-      completed: false,
-      complete: "incomplete"
-    },
-    {
-      id: "rings-img",
-      title: "Rings",
-      description: "This is my portfolio 3",
-      category: "Fotografi",
-      image: "../assets/img/The Rings - Tanya - DK.png",
-      link: "../assets/img/The Rings - Tanya - DK.png",
-      tech: "Photoshop",
-      date: "2021-03-21",
+      date: "26.03.2023",
       completed: false,
       complete: "incomplete"
     },
@@ -32,12 +20,24 @@ const getPortfolio = () => {
       description: "This is my portfolio 3",
       category: "Grafisk design",
       image: "../assets/img/bddanmark.png",
-      link: "../assets/img/bddanmark.png",
+      imagelink: "../assets/img/bddanmark.png",
       tech: "Adobe Illustrator",
-      date: "2021-03-03",
+      date: "03.03,2023",
       completed: false,
       complete: "incomplete"
-    }
+    },
+    {
+      id: "rings-img",
+      title: "Rings",
+      description: "This is my portfolio 3",
+      category: "Fotografi",
+      image: "../assets/img/The Rings - Tanya - DK.png",
+      imagelink: "../assets/img/The Rings - Tanya - DK.png",
+      tech: "Photoshop",
+      date: "07.11.2022",
+      completed: false,
+      complete: "incomplete"
+    },
   ])
 
   return {

@@ -14,7 +14,7 @@
             <div class="contact-info">
               <div class="phone">
                 <div class="icon">
-                  <a href="tel: +4531210715"><i class='fas'>&#xf3cd;</i></a> 
+                  <a href="tel: +4531210715"><i class="material-icons">phone_android</i></a> 
                 </div>
                 <div class="info">
                   <a href="tel: +4531210715"><h4>+45 31 21 07 15</h4></a> 
@@ -30,7 +30,7 @@
               </div>
               <div class="linkedin">
                 <div class="icon">
-                  <a href="https://www.linkedin.com/in/trshansen/" target="_blank"><i class='fab'>&#xf08c;</i></a>
+                  <a href="https://www.linkedin.com/in/trshansen/" target="_blank"><i class="fa">&#xf08c;</i></a>
                 </div>
                 <div class="info">
                   <a href="https://www.linkedin.com/in/trshansen/" target="_blank"><h4>@trshansen</h4></a>

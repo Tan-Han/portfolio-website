@@ -8,9 +8,9 @@ const getPortfolio = () => {
       description: "This is my portfolio 3",
       category: "Grafisk design",
       image: "../assets/img/GreenOffice.png",
-      link: "../assets/img/GreenOffice.png",
+      imagelink: "../assets/img/GreenOffice.png",
       tech: "Adobe Illustrator",
-      date: "2021-03-26",
+      date: "26.03.2023",
       completed: false,
       complete: "incomplete"
     },
@@ -20,9 +20,9 @@ const getPortfolio = () => {
       description: "This is my portfolio 3",
       category: "Grafisk design",
       image: "../assets/img/bddanmark.png",
-      link: "../assets/img/bddanmark.png",
+      imagelink: "../assets/img/bddanmark.png",
       tech: "Adobe Illustrator",
-      date: "2021-03-03",
+      date: "03.03.2023",
       completed: false,
       complete: "incomplete"
     },
@@ -32,9 +32,9 @@ const getPortfolio = () => {
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       category: "Fotografi",
       image: "../assets/img/The Rings - Tanya - DK.png",
-      link: "../assets/img/The Rings - Tanya - DK.png",
+      imagelink: "../assets/img/The Rings - Tanya - DK.png",
       tech: "Photoshop",
-      date: "2021-03-21",
+      date: "07.11.2022",
       completed: false,
       complete: "incomplete"
     },
@@ -45,14 +45,14 @@ const getPortfolio = () => {
       category: "Fotografi",
       image: "../assets/img/Christian IX statue -edited.png",
       large: "../assets/img/Chr-IX-full.png",
-      link: "../assets/img/Chr-IX-full.png",
+      imagelink: "../assets/img/Chr-IX-full.png",
       tech: "Photoshop",
-      date: "2022-11-03",
+      date: "03.11.2022",
       completed: false,
       complete: "incomplete"
     },
     {
-      id: "boren-promo",
+      id: "broen-promo",
       title: "Broen Promotion",
       description: "This is my portfolio 3",
       category: "Video",
@@ -60,7 +60,7 @@ const getPortfolio = () => {
       video: "https://www.youtube.com/embed/EWQYkcDnrSk",
       youtube: "https://youtu.be/EWQYkcDnrSk",
       tech: "Premiere Pro",
-      date: "2022-11-04",
+      date: "04.11.2022",
       completed: false,
       complete: "incomplete"
     },
@@ -72,7 +72,7 @@ const getPortfolio = () => {
         image: "../assets/img/dm-bbq.png",
         github: "https://github.com/Tan-Han/Tan-Han.github.io",
         tech: "Premiere Pro",
-        date: "2022-11-04",
+        date: "04.11.2022",
         completed: false,
         complete: "incomplete"
       }

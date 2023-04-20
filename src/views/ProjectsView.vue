@@ -39,14 +39,14 @@
       </div>
 
       <div class="link-box">
-        <template v-if="item.link">
-          <a :href="item.link" :if="item.link" target="_blank">
+        <template v-if="item.imagelink">
+          <a :href="item.imagelink" :if="item.imagelink" target="_blank">
             <i class="material-icons">image</i>
           </a>
         </template>
         <template v-if="item.github">
           <a :href="item.github" :if="item.github" target="_blank">
-            <i class="material-icons">open_in_new</i>
+            <i class="fa">&#xf092;</i>
           </a>
         </template>
         <template v-if="item.youtube">
