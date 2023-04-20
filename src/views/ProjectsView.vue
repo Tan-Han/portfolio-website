@@ -41,17 +41,17 @@
       <div class="link-box">
         <template v-if="item.link">
           <a :href="item.link" :if="item.link" target="_blank">
-            <i style='font-size:24px' class='fas'>&#xf03e;</i>
+            <i class="material-icons">image</i>
           </a>
         </template>
         <template v-if="item.github">
           <a :href="item.github" :if="item.github" target="_blank">
-            <i style='font-size:24px' class='fab'>&#xf092;</i>
+            <i class="material-icons">open_in_new</i>
           </a>
         </template>
         <template v-if="item.youtube">
           <a :href="item.youtube" :if="item.youtube" target="_blank">
-            <i style='font-size:24px' class='fab'>&#xf431;</i>
+            <i class="material-icons">smart_display</i>
           </a>
         </template>
         
@@ -83,6 +83,11 @@ const isActive = ref(true)
 
 // part 1 - get state from portfoliodb
 const { state  } = portfoliodb()
+
+
+// Filter
+
+
 
 </script>
  

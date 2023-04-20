@@ -1,15 +1,20 @@
 <template>
   <div class="about">
-    <div class="about-headline">
-      <h1>Om mig</h1>
-    </div>
     <div class="about-content">
       <div class="video-cv-box">
-        <iframe width="480" height="270" src="https://www.youtube.com/embed/RPa4h2ccP0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video-cv"></iframe>
-    </div>
+        <div>
+          <div class="about-headline">
+            <h1>Om mig</h1>
+          </div>
+          <div class="video-box">
+            <iframe width="480" height="270" src="https://www.youtube.com/embed/RPa4h2ccP0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video-cv"></iframe>
+          </div>
+
+        </div>
+      </div>
       <div class="about-text-box">
         <div>
-          <div class="flex w-100 justify-center">
+          <div class="flex w-100 justify-center align-items-center">
             <div class="picture-box">
               <img src="@/assets/img/CV-Billede-5.png" alt="">
             </div>
@@ -24,10 +29,13 @@
           </div>
           <div class="btn-box">
             
-            <a href="@/assets/CV.pdf" download="CV.pdf">
+            <a href="https://indd.adobe.com/view/publication/750000b5-b029-4e7a-919b-e5e3f74aa297/1/publication-web-resources/pdf/CV.pdf" download="CV.pdf" target="_blank">
               <button class="cv-btn">Download CV</button>
             </a>
-            <a href="https://www.linkedin.com/in/trshansen/"><button style='font-size:23px' class="linked-btn"><i class='fab fa-linkedin-in'></i></button></a>
+            <a href="https://www.linkedin.com/in/trshansen/" target="_blank">
+              <button class="cv-btn">LinkedIn</button>
+            </a>
+
           </div>
         </div>
       </div>
@@ -51,23 +59,22 @@ const isActive = ref(true)
 }
 
 .about-headline {
-  margin: 0 30%;
-  border-bottom: 1px solid var(--vt-c-beige-dark);
+  margin-bottom: 12%;
+  border-bottom: 1px solid #cdbcaf;
+  width: fit-content;
 }
 
 .about h1 {
   color: var(--vt-c-blue);
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
   font-size: 70px;
-  text-align: center;
+  text-align: left;
   padding-top: 10px;
 }
 
 .about-content {
   display: flex;
-  align-items: center;
-  height: 53vh;
-  padding-top: 50px;
+  height: fit-content;
 }
 
 .about-text-box {
@@ -90,7 +97,7 @@ const isActive = ref(true)
 
 .text {
   background-color: var(--vt-c-beige-light);
-  padding: 30px;
+  padding: 20px 30px;
   width: 80%;
   border-radius: 12px;
   box-shadow: 2px 2px 5px var(--vt-c-shadow-beige);
@@ -104,6 +111,7 @@ const isActive = ref(true)
 
 .about-text-box p {
   padding-bottom: 10px;
+  
 }
 
 .picture-box {
@@ -146,10 +154,16 @@ const isActive = ref(true)
 
 .video-cv-box {
   width: 50%;
-  height: fit-content;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.video-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .video-cv {
@@ -158,6 +172,10 @@ const isActive = ref(true)
 }
 
 @media (max-width: 1280px) {
+
+  .about-text-box h2 {
+    font-size: 25px;
+  }
   
 }
 

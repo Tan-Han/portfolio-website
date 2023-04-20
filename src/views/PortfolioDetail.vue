@@ -1,5 +1,6 @@
 <template>
-  <button @click="goBack()" class="back">Tilbage</button>
+
+<button @click="goBack()" class="back">Tilbage</button>
   <div v-if="portfolioDetails">
     <div class="content-box">
       <div class="project-headline">
@@ -16,7 +17,17 @@
 
       <div  class="project-box">
         <div class="project-img-box">
-          <img :src="portfolioDetails.image" alt="image" width="200" height="200">
+        <template v-if="portfolioDetails.video">
+          <iframe :src="portfolioDetails.video" width="640" height="360" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </template>  
+
+        <template v-else-if="portfolioDetails.large">
+          <img :src="portfolioDetails.large" alt="image" class="portfolio-card-img">
+        </template>        
+        
+        <template v-else="portfolioDetails.image">
+          <img :src="portfolioDetails.image" alt="image" class="portfolio-card-img">
+        </template>
         </div>
 
         <div class="description-box">
@@ -31,15 +42,21 @@
             <div class="links">
               <h2>Links</h2>
               <div class="icons">
-                <a href="#">
-                  <i style='font-size:24px' class='fas'>&#xf03e;</i>
-                </a>
-                <a href="#">
-                  <i style='font-size:24px' class='fas'>&#xf03e;</i>
-                </a>
-                <a href="#">
-                  <i style='font-size:24px' class='fas'>&#xf03e;</i>
-                </a>
+                <template v-if="portfolioDetails.link">
+                  <a :href="portfolioDetails.link" :if="portfolioDetails.link" target="_blank">
+                    <i class="material-icons">image</i>
+                  </a>
+                </template>
+                <template v-if="portfolioDetails.github">
+                  <a :href="portfolioDetails.github" :if="portfolioDetails.github" target="_blank">
+                    <i class="material-icons">open_in_new</i>
+                  </a>
+                </template>
+                <template v-if="portfolioDetails.youtube">
+                  <a :href="portfolioDetails.youtube" :if="portfolioDetails.youtube" target="_blank">
+                    <i class="material-icons">smart_display</i>
+                  </a>
+                </template>
               </div>
             </div> 
           </div>
@@ -120,10 +137,11 @@ const router = useRouter()
 .project-box {
   width: 100%;
   display: flex;
+  padding-top: 2rem;
 }
 
 .project-img-box {
- width: 80%;
+ width: 50%;
  height: 80vh;
  display: flex;
  justify-content: center;
@@ -133,9 +151,7 @@ const router = useRouter()
 }
 
 .project-img-box img {
-  width: 100%;
   height: 100%;
-
 }
 
 .description-box {
@@ -146,7 +162,7 @@ const router = useRouter()
 }
 
 .project-description-box {
-  width: 100%;;
+  width: 100%;
   /* display: flex; */
 }
 

@@ -14,23 +14,23 @@
             <div class="contact-info">
               <div class="phone">
                 <div class="icon">
-                  <i class='fas'>&#xf3cd;</i>
+                  <a href="tel: +4531210715"><i class='fas'>&#xf3cd;</i></a> 
                 </div>
                 <div class="info">
-                  <h4>+45 31 21 07 15</h4>
+                  <a href="tel: +4531210715"><h4>+45 31 21 07 15</h4></a> 
                 </div>
               </div>
               <div class="email">
                 <div class="icon">
-                  <i class="material-icons" style="font-size:30px">email</i>
+                  <a href="mailto: tanyalouisehansen@outlook.com"><i class="material-icons">email</i></a>
                 </div>
                 <div class="info">
-                  <a href=""><h4>tanyalouisehansen@outlook.com</h4></a>
+                  <a href="mailto: tanyalouisehansen@outlook.com"><h4>tanyalouisehansen@outlook.com</h4></a>
                 </div>
               </div>
               <div class="linkedin">
                 <div class="icon">
-                  <i style="font-size: 30px;" class='fab'>&#xf08c;</i>
+                  <a href="https://www.linkedin.com/in/trshansen/" target="_blank"><i class='fab'>&#xf08c;</i></a>
                 </div>
                 <div class="info">
                   <a href="https://www.linkedin.com/in/trshansen/" target="_blank"><h4>@trshansen</h4></a>
@@ -162,6 +162,16 @@ let products = [
   text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
 }
 
+.icon i {
+  font-size: 30px;
+}
+
+.icon a {
+  font-size: 30px;
+  color: var(--vt-c-white);
+  text-shadow: 1px 1px 3px var(--vt-c-darkgrey);
+}
+
 .info {
   padding: 0 10px;
   height: 50px;
@@ -227,10 +237,9 @@ let products = [
     color: var(--vt-c-darkgrey);
   }
 
-  /* .phone, .email, .linkedin {
-    display: flex;
-    padding: 10px 0;
-  } */
+  .info h4 {
+    font-size: 20px;
+  }
 
 }
 
