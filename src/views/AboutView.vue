@@ -21,9 +21,9 @@
           <div class="text-box">
             <div class="text">
               <h2 class="navn">Tanya Reedtz Shkodra Hansen</h2>
-              <p>Med en kombination af akademisk viden og praktisk erfaring er jeg, på trods af min status som nyuddannet, udstyret med gode kompetencer inden for digital markedsføring og grafisk design.</p>
-              <p>Med en indsigtsfuld og kreativ fremgangsmåde, brænder jeg for at levere engagerende budskaber til kunder og interessenter, gennem visuel kommunikation.</p>
-              <p>Med et åbent sind og stor entusiasme tager jeg gerne imod nye udfordringer, og fører projekter til ende med stor eftertænksomhed og kreativitet.</p>
+              <p class="hyphen">Med en kombination af akademisk viden og praktisk erfaring er jeg, på trods af min status som nyuddannet, udstyret med gode kompetencer inden for digital markedsføring og grafisk design.</p>
+              <p class="hyphen">Med en indsigtsfuld og kreativ fremgangsmåde, brænder jeg for at levere engagerende budskaber til kunder og interessenter, gennem visuel kommunikation.</p>
+              <p class="hyphen">Med et åbent sind og stor entusiasme tager jeg gerne imod nye udfordringer, og fører projekter til ende med stor eftertænksomhed og kreativitet.</p>
             </div>
           </div>
           <div class="btn-box">
@@ -196,7 +196,7 @@ const isActive = ref(true)
   }
 
   .about-text-box h2 {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .picture-box {

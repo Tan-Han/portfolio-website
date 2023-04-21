@@ -17,6 +17,7 @@
           <button type="button" class="filter-btn" @click="changeCategory('Fotografi')" value="Fotografi">Fotografi</button>
           <button type="button" class="filter-btn" @click="changeCategory('Grafisk design')" value="Grafisk design">Grafisk design</button>
           <button type="button" class="filter-btn" @click="changeCategory('Video')" value="Video">Video</button>
+          <button type="button" class="filter-btn" @click="changeCategory('UX')" value="UX">UX</button>
         </div>
     </div> 
    <br>
@@ -36,24 +37,24 @@
           <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}" class="card-headline">
             <h2>{{ item.title }}</h2>
           </RouterLink>
-          <p>
+          <p class="hyphen">
             {{ item.description }}
           </p>
         </div>
 
         <div class="link-box">
           <template v-if="item.imagelink">
-            <a :href="item.imagelink" :if="item.imagelink" target="_blank" class="icon-link">
+            <a :href="item.imagelink" target="_blank" class="icon-link">
               <i class="material-icons">image</i>
             </a>
           </template>
           <template v-if="item.github">
-            <a :href="item.github" :if="item.github" target="_blank" class="icon-link">
+            <a :href="item.github" target="_blank" class="icon-link">
               <i class="fa">&#xf092;</i>
             </a>
           </template>
           <template v-if="item.youtube">
-            <a :href="item.youtube" :if="item.youtube" target="_blank" class="icon-link">
+            <a :href="item.youtube" target="_blank" class="icon-link">
               <i class="material-icons">smart_display</i>
             </a>
           </template>

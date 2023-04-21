@@ -191,6 +191,15 @@ let show = ref(true);
   width: 60%;
 }
 
+.card-box a:hover {
+  color: var(--vt-c-blue);
+  text-shadow: 1px 1px 1px #13424c;
+}
+
+.card-box h4:hover {
+  color: var(--vt-c-blue);
+  text-shadow: 1px 1px 1px #13424c;
+}
 
 @keyframes shimmer {
   100% {-webkit-mask-position:left}

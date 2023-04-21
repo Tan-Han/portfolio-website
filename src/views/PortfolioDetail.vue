@@ -33,32 +33,43 @@
         <div class="description-box">
           <div class="project-description-box">
             <div class="description">
-              {{ portfolioDetails.description }}
+              <p class="description-text hyphen">
+                {{ portfolioDetails.description }}
+              </p>
             </div>
-            <div class="tech">
-              <h2>Programmer</h2>
-              {{ portfolioDetails.tech }}
-            </div>
-            <div class="links">
-              <h2>Links</h2>
-              <div class="icons">
-                <template v-if="portfolioDetails.link">
-                  <a :href="portfolioDetails.link" :if="portfolioDetails.link" target="_blank">
-                    <i class="material-icons">image</i>
-                  </a>
-                </template>
-                <template v-if="portfolioDetails.github">
-                  <a :href="portfolioDetails.github" :if="portfolioDetails.github" target="_blank">
-                    <i class="material-icons">open_in_new</i>
-                  </a>
-                </template>
-                <template v-if="portfolioDetails.youtube">
-                  <a :href="portfolioDetails.youtube" :if="portfolioDetails.youtube" target="_blank">
-                    <i class="material-icons">smart_display</i>
-                  </a>
-                </template>
+            <div class="extra">
+              <div class="tech-detail">
+                <h2 class="mini-headline">Programmer</h2>
+                <p class="description-text">
+                  {{ portfolioDetails.tech }}
+                </p>
               </div>
-            </div> 
+              <div class="links-detail">
+                <h2 class="mini-headline">Links</h2>
+                <div class="icons">
+                  <template v-if="portfolioDetails.imagelink">
+                    <a :href="portfolioDetails.imagelink" target="_blank">
+                      <i class="material-icons">image</i>
+                    </a>
+                  </template>
+                  <template v-if="portfolioDetails.github">
+                    <a :href="portfolioDetails.github" target="_blank">
+                      <i class="material-icons">open_in_new</i>
+                    </a>
+                  </template>
+                  <template v-if="portfolioDetails.youtube">
+                    <a :href="portfolioDetails.youtube" target="_blank">
+                      <i class="material-icons">smart_display</i>
+                    </a>
+                  </template>
+                  <template v-if="portfolioDetails.link">
+                    <a :href="portfolioDetails.link" target="_blank" class="icon-link">
+                      <i class="material-icons">open_in_new</i>
+                    </a>
+                  </template>
+                </div>
+              </div> 
+            </div>
           </div>
 <!--           
           <div class="otherstuff">
@@ -175,30 +186,32 @@ const router = useRouter()
   background-color: var(--vt-c-blue);
 }
 
-/* .otherstuff {
-  width: 50%; 
-  margin-left: 1rem;
-} */
+.extra {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
 
-
-.tech {
+.tech-detail {
  background-color: var(--vt-c-beige-dark);
- width: 100%;
- height: fit-content;
+ width: 50%;
  padding: 1rem 2rem;
  border-radius: 12px;
+ margin-right: 0.5rem;
+ min-height: 100px;
 }
 
-.links {
+.links-detail {
   background-color: var(--vt-c-beige-light);
-  width: 100%;
-  height: fit-content;
+  width: 50%;
   padding: 1rem 2rem;
   border-radius: 12px;
-  margin-top: 1rem;
+  margin-left: 0.5rem;
+  min-height: 100px;
 }
 
-.links a {
+.links-detail a {
   text-decoration: none;
   color: var(--vt-c-darkgrey);
   font-weight: 600;
@@ -208,7 +221,7 @@ const router = useRouter()
   text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
 }
 
-.links a:hover {
+.links-detail a:hover {
   color: var(--vt-c-blue);
   text-shadow: 1px 1px 2px var(--vt-c-shadow-blue);
 }
@@ -216,6 +229,17 @@ const router = useRouter()
 .back {
   width: fit-content;
   margin: 2rem 2rem 0 2rem;
+}
+
+.description-text {
+  font-size: 18px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mini-headline {
+  font-size: 22px;
 }
 
 /* Media Queries */
@@ -233,6 +257,24 @@ const router = useRouter()
   .project-img-box img {
     width: 100%;
     height: 100%;
+  }
+  .description-text {
+    font-size: 14px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .mini-headline {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 860px) {
+  
+  .tech-detail, .links-detail {
+    min-height: 105px;
   }
 }
 
@@ -264,10 +306,9 @@ const router = useRouter()
     width: 100%;
     padding: 0 2rem;
   }
-
-  .project-description-box {
-    width: 100%;
-    /* display: flex; */
+ 
+  .tech-detail, .links-detail {
+    min-height: 100px;
   }
 }
 
@@ -293,6 +334,27 @@ const router = useRouter()
   .back {
     padding: 10px 20px;
     margin: 3rem 3rem 0 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .extra {
+    flex-direction: column;
+  }
+
+  .tech-detail {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .links-detail {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .tech-detail, .links-detail {
+    min-height: fit-content;
   }
 }
 

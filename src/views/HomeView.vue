@@ -6,8 +6,8 @@
         <h1>Velkommen</h1>
         <div class="description-box-home">
           <h2>Mit navn er <span>Tanya R. S. Hansen</span></h2>
-          <h3>Jeg er er <span>multimediedesigner</span>, og min passion er at føre mine kreative idéer ud i livet.</h3>
-          <h3>Jeg har arbejdet med flere projekter, bl.a. logo design, grafisk materiale til sociale medier, og design af hjemmesider. </h3>
+          <h3 class="hyphen">Jeg er er <span>multimediedesigner</span>, og min passion er at føre mine kreative idéer ud i livet.</h3>
+          <h3 class="hyphen">Jeg har arbejdet med flere projekter, bl.a. logo design, grafisk materiale til sociale medier, og design af hjemmesider. </h3>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
             <RouterLink :to="{ name: 'portfoliodetail', params: { id: item.id }}" class="card-headline">
               <h2>{{ item.title }}</h2>
             </RouterLink>
-            <p>
+            <p class="hyphen">
               {{ item.description }}
             </p>
           </div>
@@ -62,12 +62,17 @@
             </template>
             <template v-if="item.github">
               <a :href="item.github" :if="item.github" target="_blank" class="icon-link">
-                <i class="fa">&#xf092;</i>
+                <i class="fa material-icons">&#xf092;</i>
               </a>
             </template>
             <template v-if="item.youtube">
               <a :href="item.youtube" :if="item.youtube" target="_blank" class="icon-link">
                 <i class="material-icons">smart_display</i>
+              </a>
+            </template>
+            <template v-if="item.link">
+              <a :href="item.link" :if="item.link" target="_blank" class="icon-link">
+                <i class="material-icons">open_in_new</i>
               </a>
             </template>
             
