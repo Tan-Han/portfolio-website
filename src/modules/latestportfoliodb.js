@@ -38,7 +38,7 @@ const getPortfolio = () => {
       date: "03.03,2023",
       completed: false,
       complete: "incomplete"
-    },
+    }
   ])
 
   return {

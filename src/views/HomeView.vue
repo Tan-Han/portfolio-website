@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="imagebox">
-      <img src="@/assets/img/Billede---Homepage.png" alt="Billede" class="img-home">
+      <img src="@/assets/img/Billede-Homepage.png" alt="Billede" class="img-home">
     </div>
   </div>
   <a href="#projects">

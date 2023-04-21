@@ -15,7 +15,7 @@
         <div class="box">
           <div class="flex w-100 justify-center align-items-center">
             <div class="picture-box">
-              <img src="@/assets/img/CV-Billede-5.png" alt="">
+              <img src="@/assets/img/CV-Billede-5.jpg" alt="">
             </div>
           </div>
           <div class="text-box">

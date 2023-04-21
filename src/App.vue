@@ -15,6 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/projects">Projekter</RouterLink>
         <RouterLink to="/about">Om mig</RouterLink>
         <RouterLink to="/contact">Kontakt</RouterLink>
+        <a href="https://www.linkedin.com/in/trshansen/" target="_blank">LinkedIn</a>
       </nav>
     </div>
   </header>
