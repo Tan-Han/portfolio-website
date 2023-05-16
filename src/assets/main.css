@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 h1 {
-  font-family: "adorn-smooth-garland", sans-serif;
+  font-family: adorn-smooth-garland, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -73,7 +73,7 @@ a,
   margin: 2rem;
   border-radius: 12px; 
   border: 1px solid var(--vt-c-beige-dark);
-  box-shadow: 1px 1px 10px var(--vt-c-shadow-beige); 
+  box-shadow: 5px 5px 5px var(--vt-c-shadow-beige); 
   max-width: 300px;
   background-color: var(--vt-c-white);
 }

@@ -186,8 +186,6 @@ let show = ref(true);
 }
 
 .logo-box img {
-  box-shadow: 1px 1px 3px var(--vt-c-darkgrey);
-  border-radius: 100%;
   width: 60%;
 }
 
